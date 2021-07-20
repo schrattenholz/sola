@@ -1,0 +1,25 @@
+{
+    "name": "schrattenholz/sola",
+    "description": "Sola-Bestellsystem Standard-Template",
+    "type": "silverstripe-theme",
+    "keywords": ["silverstripe", "theme"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Fabian Schrattenholz ",
+            "homepage": "https://sola-soft.de"
+        }
+    ],
+    "require": {
+        "composer/installers": "*",
+        "silverstripe/framework": ">=3.5"
+    },
+	"extra": {
+        "expose": [
+            "css",
+            "img",
+            "javascript",
+            "fonts"
+        ]
+	}
+}
