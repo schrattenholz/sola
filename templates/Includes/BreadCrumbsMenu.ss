@@ -2,7 +2,7 @@
 <% if $CrumbsList(false) %>
 <nav aria-label="Breadcrumb" class="breadcrumbs d-none d-lg-flex">
 <div class="d-flex justify-content-center justify-content-lg-start"><i class="czi-view-grid align-self-center text-primary"></i></div>
-	<ol <% if $ClassName=="Schrattenholz\Order\Product" %> style="background:transparent;padding:0;" <%end_if %>  itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumb breadcrumb$Design flex-lg-nowrap justify-content-center justify-content-lg-start">
+	<ol <% if $ClassName=="Schrattenholz\Order\Product" %> style="background:transparent;padding:0;" <%end_if %>  itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumb breadcrumb$Design pr-$PaddingRight flex-lg-nowrap justify-content-center justify-content-lg-start">
 		<% loop $CrumbsList(false) %>
 			<li class="nav-item <% if $getPage.Children && $getPage.ClassName="Schrattenholz\Order\ProductList"  %>dropdown<% end_if %> text-nowrap" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 
