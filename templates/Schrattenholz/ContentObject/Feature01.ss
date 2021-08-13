@@ -6,7 +6,8 @@
 		<div class="offset-md-2 d-none d-md-flex"></div>
 		<div class="col-md-4 pt-4 pt-md-0 d-flex">
 			<div style="align-self:center;">
-				<h2 class="bg-headline"><span>$Title</span></h2>
+				<h2 class="bg-headline-before bg-headline"><span>$Title</span></h2>
+				<h3 class="text-light"><span>$SubHead</span></h3>
 				$Content
 			</div>
         </div>

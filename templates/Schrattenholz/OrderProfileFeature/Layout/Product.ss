@@ -1,4 +1,3 @@
-
 <!-- Page Title (Shop)-->
 
 <div class="bg-dark pt-4" style="margin-top:5rem;">
@@ -22,13 +21,16 @@
 				<div class="row w-100" >
 					<div class="col-lg-8 pr-lg-0 pt-lg-4">
 						<div class="cz-preview order-sm-2 m-0" wfd-id="378">
-							
 							<% if $ProductImages %>
-							<% loop $ProductImages.Sort('SortOrder') %>
-							  <div class="cz-preview-item  <% if $First %>active<% end_if %>" id="ProductImage_$ID" wfd-id="385"><img class="cz-image-zoom" src="$ScaleWidth(600).URL" data-zoom="$ScaleWidth(1400).URL" alt="$Filename">
-								<div class="cz-image-zoom-pane" wfd-id="386"></div>
-							  </div>
-							<% end_loop %>
+								<% loop $ProductImages.Sort('SortOrder') %>
+								  <div class="cz-preview-item  <% if $First %>active<% end_if %>" id="ProductImage_$ID" wfd-id="385"><img class="cz-image-zoom" src="$ScaleWidth(600).URL" data-zoom="$ScaleWidth(1400).URL" alt="$Filename">
+									<div class="cz-image-zoom-pane" wfd-id="386"></div>
+								  </div>
+								<% end_loop %>
+							<% else %>
+							 <div class="cz-preview-item  <% if $First %>active<% end_if %>" id="ProductImage_$DefaultImage.ID" wfd-id="385"><img class="cz-image-zoom" src="$DefaultImage.ScaleWidth(600).URL" data-zoom="$DefaultImage.ScaleWidth(1400).URL" alt="$DefaultImage.Filename">
+									<div class="cz-image-zoom-pane" wfd-id="386"></div>
+								  </div>
 							<% end_if %>
 						</div>
 						<div class="row triangle">
@@ -37,10 +39,7 @@
 								<% include Schrattenholz\OrderProfileFeature\Includes\Product_Info %>
 							</div>
 						</div>
-											
-						<% if not $ProductImages %>
-							<img src="$Fill(100,100).URL" alt="$Filename">
-						<% end_if %>
+
 						<!-- Sharing-->
 						<% include Schrattenholz\OrderProfileFeature\Includes\Product_Sharing %>
 				  </div>
